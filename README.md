@@ -2,20 +2,33 @@
 Spring Boot File Upload Application
 ===================================
 
+Here’s a detailed `README.md` file for your **Spring Boot File Upload (Video/Image/PDF)** project with Bootstrap UI:
+
+---
+
+```markdown
+# Spring Boot File Upload Application
+
 This is a simple Spring Boot application that allows users to upload files (such as video, images, or PDFs) through a responsive Bootstrap-based HTML form. The uploaded files are saved to a specified folder on the local file system.
 
-Technologies Used
------------------
+---
+
+## 🛠️ Technologies Used
+
 - Java 17+
 - Spring Boot (Web, Multipart Support)
 - Bootstrap 5
 - HTML5
 - Maven
 
-Folder Structure
-----------------
+---
+
+## 📁 Folder Structure
+
+```
+
 springboot-upload-any-file/
-|
+│
 ├── src/
 │   └── main/
 │       └── java/
@@ -31,66 +44,103 @@ springboot-upload-any-file/
 │               └── index.html
 │
 ├── pom.xml
-└── README.txt
+└── README.md
 
-Configuration
--------------
-application.properties:
+````
 
-location=C:\Users\Sharad\Desktop\uploadedfiles
+---
+
+## ⚙️ Configuration
+
+### `application.properties`
+
+```properties
+# Folder path to save uploaded files (change this to your desired directory)
+location=C:\\Users\\Sharad\\Desktop\\uploadedfiles
+
+# File size limits
 spring.servlet.multipart.max-file-size=100MB
 spring.servlet.multipart.max-request-size=100MB
+````
 
-Make sure the upload folder exists. If not, create it manually at the path you specified.
+> 📌 Make sure the upload folder exists. If not, create it manually at the path you specified.
 
-FileController.java
--------------------
+---
+
+## 📄 FileController.java
+
 Handles file upload requests:
 
+```java
 @PostMapping("/upload")
 public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file) {
     // Saves the uploaded file to the specified directory
 }
+```
 
-Frontend (index.html)
----------------------
-- Located in src/main/resources/static/index.html
-- Uses Bootstrap for responsive design
-- Accepts all file types, including videos
+---
 
+## 🌐 Frontend (index.html)
+
+* Located in `src/main/resources/static/index.html`
+* Uses Bootstrap for responsive design
+* Accepts all file types, including videos
+
+```html
 <form action="/upload" method="post" enctype="multipart/form-data">
   <input type="file" name="file" accept="video/*" required>
   <button type="submit">Upload</button>
 </form>
+```
 
-Run the Project
----------------
+---
+
+## ▶️ Run the Project
+
 1. Clone or download the project.
-2. Open it in Spring Tool Suite, IntelliJ, or any IDE.
-3. Run the main() method.
-4. Visit http://localhost:8080/index.html to use the upload form.
+2. Open it in **Spring Tool Suite**, **IntelliJ**, or any IDE.
+3. Run the `main()` method.
+4. Visit `http://localhost:8080/index.html` to use the upload form.
 
-Output
-------
-Uploaded files will be saved to the folder specified in application.properties.
+---
 
+## 📂 Output
+
+Uploaded files will be saved to the folder specified in `application.properties`.
 Example:
+
+```
 C:\Users\Sharad\Desktop\uploadedfiles\yourfile.mp4
+```
 
-Features
---------
-- Upload any type of file (video, image, PDF, etc.)
-- Simple and responsive UI using Bootstrap
-- Handles large files (up to 100MB)
-- Returns success or error message
+---
 
-To Do (Optional Enhancements)
------------------------------
-- Add file preview for videos/images
-- Store uploaded file metadata in database
-- Display upload progress bar
-- Secure file type/extension validation
+## ✅ Features
 
-Author
-------
-Sharad Kamble
+* Upload any type of file (video, image, PDF, etc.)
+* Simple and responsive UI using Bootstrap
+* Handles large files (up to 100MB)
+* Returns success or error message
+
+---
+
+## 📌 To Do (Optional Enhancements)
+
+* Add file preview for videos/images
+* Store uploaded file metadata in database
+* Display upload progress bar
+* Secure file type/extension validation
+
+---
+
+## 📧 Author
+
+**Sharad Kamble**
+
+---
+
+```
+
+Let me know if you want a GitHub repository name suggestion or want to add MySQL for storing upload history.
+```
+
