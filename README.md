@@ -15,23 +15,21 @@ Technologies Used
 Folder Structure
 ----------------
 springboot-upload-any-file/
-|
+springboot-file-upload/
 ├── src/
 │   └── main/
-│       └── java/
-│           └── com/
-│               └── example/
-│                   └── demo/
-│                       └── controller/
-│                           └── FileController.java
-│
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           └── demo/
+│       │               └── controller/
+│       │                   └── FileController.java
 │       └── resources/
 │           ├── application.properties
 │           └── static/
 │               └── index.html
-│
 ├── pom.xml
-└── README.txt
+├── README.md
 
 Configuration
 -------------
