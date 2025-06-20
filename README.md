@@ -139,8 +139,3 @@ C:\Users\Sharad\Desktop\uploadedfiles\yourfile.mp4
 
 ---
 
-```
-
-Let me know if you want a GitHub repository name suggestion or want to add MySQL for storing upload history.
-```
-
